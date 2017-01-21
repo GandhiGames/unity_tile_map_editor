@@ -1,2 +1,2 @@
-# unity_tile_map_editor
+# Unity Tile Map Editor
 A straightforward tile map editor for Unity.

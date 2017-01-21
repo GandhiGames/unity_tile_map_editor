@@ -33,7 +33,7 @@ public class E_TileSelectionWindow : EditorWindow
 	void OnGUI ()
 	{
 		var selectedObj = Selection.activeObject;
-		
+
 		if (selectedObj == null) {
 			return;
 		}
@@ -47,8 +47,8 @@ public class E_TileSelectionWindow : EditorWindow
 		if (selection == null) {
 			return;
 		}
-		 
-		var texture2D = selection.MapTexture;
+
+		var texture2D = selection.mapTexture;
 		if (texture2D != null) {
 
 
@@ -65,11 +65,11 @@ public class E_TileSelectionWindow : EditorWindow
 
 			GUI.DrawTexture (new Rect (offset.x, offset.y, newTextureSize.x, newTextureSize.y), texture2D);
 
-			var tile = selection.TileSize * newScale;
+			var tile = selection.tileSize * newScale;
 			var grid = new Vector2 (newTextureSize.x / tile.x, newTextureSize.y / tile.y);
 
 			var selectionPos = new Vector2 (tile.x * currentSelection.x + offset.x,
-				                   tile.y * currentSelection.y + offset.y);
+				tile.y * currentSelection.y + offset.y);
 
 			var boxTex = new Texture2D (1, 1);
 			boxTex.SetPixel (0, 0, new Color (0, 0.5f, 1f, 0.4f));

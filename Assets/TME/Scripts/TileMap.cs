@@ -5,32 +5,13 @@ namespace TME
 {
 	public class TileMap : MonoBehaviour
 	{
-		private static readonly int DEFAULT_MAP_WIDTH = 20;
-		private static readonly int DEFAULT_MAP_HEIGHT = 20;
+		public Vector2 mapSize;
+		public Texture2D mapTexture;
+		public Vector2 tileSize = Vector2.zero;
+		public object[] spriteRefs;
+		public Vector2 gridSize;
+		public int pixelsToUnits = 100;
 
-		private Vector2 mapSize = new Vector2 (DEFAULT_MAP_WIDTH, DEFAULT_MAP_HEIGHT);
-
-		public Vector2 MapSize { get { return this.mapSize; } set { mapSize = value; } }
-
-		private Texture2D mapTexture;
-
-		public Texture2D MapTexture { get { return this.mapTexture; } set { mapTexture = value; } }
-
-		private Vector2 tileSize = Vector2.zero;
-
-		public Vector2 TileSize { get { return this.tileSize; } set { tileSize = value; } }
-
-		private object[] spriteRefs;
-
-		public object[] SpriteRefs { get { return this.spriteRefs; } set { spriteRefs = value; } }
-
-		private Vector2 gridSize;
-
-		public Vector2 GridSize { get { return this.gridSize; } set { gridSize = value; } }
-
-		private int pixelsToUnits = 100;
-
-		public int PixelsToUnits { get { return this.pixelsToUnits; } set { pixelsToUnits = value; } }
 
 		private int tileID = 1;
 
